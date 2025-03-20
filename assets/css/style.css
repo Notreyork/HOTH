@@ -1,6 +1,6 @@
 * {
 	color: #FFE7DF;
-	font-size: 15px;
+	font-size: 24px;
 	font-style: normal;
 	padding: 0;
 	margin: 0;
@@ -51,14 +51,20 @@ li {
 	list-style: none;
 }
 
-._60rem {
-	width: 60rem;
+h1,
+h2,
+h3 {
+	font-family: "Gaegu", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
+
+
 
 @media only screen and (max-width: 60rem) {
 
 	._60rem {
-		width: 100%;
+		
 	}
 
 }
