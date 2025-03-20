@@ -1,6 +1,6 @@
 * {
 	color: #FFE7DF;
-	font-size: 11px;
+	font-size: 15px;
 	font-style: normal;
 	padding: 0;
 	margin: 0;
@@ -49,4 +49,16 @@ ul {
 
 li {
 	list-style: none;
+}
+
+._60rem {
+	width: 60rem;
+}
+
+@media only screen and (max-width: 60rem) {
+
+	._60rem {
+		width: 100%;
+	}
+
 }
