@@ -51,7 +51,7 @@ title: Home
 
 	<div class="main-image">
 
-		<img src="/assets/images/main.png" style="">
+		<img src="/assets/images/main.png">
 
 		<video autoplay muted loop>
             <source src="/assets/images/main2.mp4" type="video/mp4">
