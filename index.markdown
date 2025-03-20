@@ -17,7 +17,7 @@ title: Home
 
 	.main-image {
 		position: absolute;
-		width: 30rem;
+		width: 35rem;
 		padding: 1rem;
 		top: 50%;
 		left: 50%;
@@ -38,7 +38,7 @@ title: Home
     	transform: translateX(-50%);
 	}
 
-	@media only screen and (max-width: 35rem) {
+	@media only screen and (max-width: 50rem) {
 		.main-image {
 			width: 100%;
 		}
