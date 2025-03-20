@@ -38,8 +38,8 @@ body::-webkit-scrollbar {
 main {
 	width: 100vw;
 	min-height: 100dvh;
-	padding: 1rem;
 	margin-top: 3rem;
+	margin-bottom: 4rem;
 }
 
 ul {

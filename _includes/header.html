@@ -4,12 +4,14 @@
 		display: flex;
 		flex-direction: row;
 		position: fixed;
+		line-height: 1;
 		width: 100vw;
 		padding: 1rem 2rem;
 		top: 0;
 		left: 0;
 
 		z-index: 9999999999;
+
 	}
 
 	header .logo {
@@ -47,8 +49,17 @@
 
 	<nav>
 		<ul>
+
 			<li>
-				<a href="/about/">About</a>
+				<a href="{{ site.baseurl }}/about/">About</a>
+			</li>
+
+			<li>
+				<a href="{{ site.baseurl }}/work/">Work</a>
+			</li>
+
+			<li>
+				<a href="{{ site.baseurl }}/contact/">Contact</a>
 			</li>
 			
 		</ul>
