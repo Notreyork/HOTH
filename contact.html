@@ -4,6 +4,117 @@ title: Contact
 permalink: /contact/
 ---
 
-<div></div>
+<style type="text/css">
+	main {
+		margin-bottom: 0;
+	}
 
-<div></div>
+	.page {
+		width: 100%;
+		padding: 1rem;
+		margin-top: 3rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.page_container {
+		display: flex;
+		justify-content: center;
+		align-items: stretch; /* Ensures both sides stretch to the same height */
+		gap: 2rem;
+		position: absolute;
+		width: 40rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.contact_left,
+	.contact_right {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch; /* Forces children to take full height */
+		min-height: 100%; /* Ensures both sections are the same height */
+	}
+
+	.contact_left img {
+		width: 100%;
+		height: 100%; /* Forces image to match height */
+		object-fit: cover; /* Prevents distortion */
+	}
+
+	.contact_right {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	.contact_right .contact_info {
+		flex: 1;
+	}
+
+	.contact_right .contact_info img {
+		width: 75%;
+		margin-top: 1rem;
+		float: right;
+	}
+
+	.contact_right img {
+		width: 100%;
+		height: auto;
+		margin-top: auto; 
+	}
+
+	@media only screen and (max-width: 50rem) {
+		
+		main {
+			margin-bottom: 4rem;
+		}
+	    .page_container {
+	        flex-direction: column;
+	        position: static; /* Remove absolute positioning */
+	        width: 100%;
+	        transform: none;
+	        top: unset;
+	        left: unset;
+	    }
+
+	    .contact_left,
+	    .contact_right {
+	        min-height: auto;
+	        width: 100%;
+	    }
+
+	    .contact_left img,
+	    .contact_right img {
+	        height: auto;
+	    }
+	}
+
+
+</style>
+
+<div class="page">
+
+	<div class="page_container">
+
+		<div class="contact_left">
+			<img src="/assets/images/about1.JPG" style="width: 100%;">
+		</div>
+
+		<div class="contact_right">
+
+			<div class="contact_info">
+				<h1>contact</h1>
+				<a href="mailto:lauren.marchese@pm.me">lauren.marchese@pm.me</a>
+				<img src="/assets/images/about3.gif"s>
+			</div>
+
+			<img src="/assets/images/about2.JPG">
+
+		</div>
+
+	</div>
+
+</div>

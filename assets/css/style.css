@@ -80,6 +80,8 @@ h3 {
 
 a {
 	color: #FFE7DF;
+	font-family: "Lacquer", system-ui;
+	text-decoration: none;
 }
 
 a:hover {
