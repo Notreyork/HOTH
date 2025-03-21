@@ -4,4 +4,113 @@ title: Work
 permalink: /works/
 ---
 
-Works
+<style type="text/css">
+
+	.projects {
+	    margin-top: 3rem;
+	}
+
+	.projects_grid {
+	    display: grid;
+	    grid-template-columns: repeat(4, 1fr);
+	    gap: 1rem;
+	    padding: 1rem 5rem 1rem 1rem;
+	}
+
+	.projects_grid_item {
+	    position: relative; 
+	    box-sizing: border-box;
+	    width: 100%;
+	}
+
+	.projects_grid_item img {
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	    transition: filter 0.3s ease-in-out;
+	    z-index: 1;
+	}
+
+	.projects_grid_item:hover img {
+	    filter: grayscale(100%);
+	}
+
+	.projects_grid_item_overlay {
+	    position: absolute;
+	    display: flex;
+	    background: rgba(255, 255, 255, 0.5);
+	    color: #000;
+	    font-family: "Lacquer", system-ui;
+	    text-align: center;
+	    text-transform: lowercase;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    align-items: center;
+	    justify-content: center;
+	
+	    opacity: 0;
+	    transition: opacity 0.3s ease-in-out;
+	    z-index: 2;
+	}
+
+	/* Show overlay on hover */
+	.projects_grid_item:hover .projects_grid_item_overlay {
+	    opacity: 1; /* Make overlay visible on hover */
+	}
+
+	@media only screen and (max-width: 799px) {
+		.projects_grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+	}
+
+	@media only screen and (max-width: 499px) {
+		.projects_grid {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+
+
+
+</style>
+
+<div class="projects">
+
+	<div class="projects_grid">
+		
+		<div class="projects_grid_item">
+			<div class="projects_grid_item_overlay">
+				Farm
+			</div>
+			<img src="/assets/images/1-farm.png">
+		</div>
+
+		<div class="projects_grid_item">
+			<div class="projects_grid_item_overlay">
+				Gabriola
+			</div>
+			<img src="/assets/images/3-gabriola.png">
+		</div>
+
+		<div class="projects_grid_item">
+			<div class="projects_grid_item_overlay">
+				Adjala-Tosorontio
+			</div>
+			<img src="/assets/images/2-adjala-tosorontio.png">
+		</div>
+
+		<div class="projects_grid_item">
+			<div class="projects_grid_item_overlay">
+				Toronto
+			</div>
+			<img src="/assets/images/4-toronto.jpg">
+		</div>
+
+	</div>
+	
+</div>
