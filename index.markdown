@@ -41,6 +41,7 @@ title: Home
 	@media only screen and (max-width: 50rem) {
 		.main-image {
 			width: 100%;
+			padding: 1rem 5rem 1rem 1rem;
 		}
 
 	}
