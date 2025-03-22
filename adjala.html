@@ -4,17 +4,28 @@ title: Adjala-Tosorontio
 permalink: /works/adjala-tosorontio/
 ---
 
-<div class="image_grid">
+<div class="image_grid_container">
 
-	{% for item in site.data.works.adjala %}
+	<h1>Adjala-Tosorontio</h1>
 
-	<div class="image_grid_item">
-		<img src="{{ item.url }}" alt="{{ item.alt }}">
+	<p>
+		September 2024. The first feast of its kind on this land in my generation. Seven courses, each a slow-blooming spell, laid gently on the adjoined picnic tables as Zo and I wove between embers and outstretched hands. Our friends raised questions as they wandered the garden, eyes wide, already tasting what they hadn’t yet touched. The air thick with woodsmoke, soil wedged beneath our nails, the night tipping over into something half-feral, half-sacred. By dawn, it had settled not just as a gathering, but an artifact. Pressed into the weight of full bellies and stained palms, something to be held in the body long after the plates were cleared. A quiet reckoning: history is not only inherited. It is shaped, kneaded, eaten, exhaled into being. And beneath it all, the land remembers. To feast here is to listen, to acknowledge, to honor those who first knew the language of this soil.
+	</p>
+
+	<div class="image_grid">
+
+		{% for item in site.data.works.adjala %}
+
+		<div class="image_grid_item">
+			<img src="{{ item.url }}" alt="{{ item.alt }}">
+		</div>
+
+		{% endfor %}
+		
 	</div>
 
-	{% endfor %}
-	
 </div>
+
 
 <div class="overlay"></div>
 <div class="overlay-content">

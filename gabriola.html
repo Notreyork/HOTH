@@ -4,16 +4,25 @@ title: Gabriola
 permalink: /works/gabriola/
 ---
 
-<div class="image_grid">
+<div class="image_grid_container">
 
-	{% for item in site.data.works.gabriola %}
+	<h1>Gabriola</h1>
 
-	<div class="image_grid_item">
-		<img src="{{ item.url }}" alt="{{ item.alt }}">
+	<p>
+		Field to Feast was a gathering rooted in reverence, an evening where the harvest became a conversation between land, community, and time. Lola, the chef, and Rose, her trusted sous chef, curated a menu that honored the fall harvest (thanks to Graham and his cabbage, Sarah and her flowers, and Miranda and her potatoes), selecting local ingredients that told the story of this place. Six courses unfolded, each a tribute to the soil, the hands that nurtured it, and the relationships formed in the process. We gathered around a long table in a poly tunnel, where dead tomato plants had been pulled earlier that day to make space for the feast. A local wine pairing from Averill Creek deepened our connection to the land. This dinner was more than nourishment; it reminded us of our ties to the earth, each other, and those who’ve tended this land long before us. We acknowledge the Coast Salish peoples, including the Snuneymuxw, who have cared for Gabriola Island for generations. Their stewardship is integral to the fabric of this place, and we are grateful for their ongoing care. We are committed to learning from and supporting Indigenous communities in their efforts to protect the land, language, and culture. Stay tuned for the 2025 feast, news coming soon!
+	</p>
+
+	<div class="image_grid">
+
+		{% for item in site.data.works.gabriola %}
+
+		<div class="image_grid_item">
+			<img src="{{ item.url }}" alt="{{ item.alt }}">
+		</div>
+
+		{% endfor %}
+		
 	</div>
-
-	{% endfor %}
-	
 </div>
 
 <div class="overlay"></div>

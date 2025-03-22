@@ -4,6 +4,55 @@ title: Farm
 permalink: /works/toronto/
 ---
 
-{% for item in site.data.toronto.gallery %}
-  <img src="{{ item.url }}" alt="{{ item.alt }}">
-{% endfor %}
+
+<div class="image_grid_container">
+
+	<h1>Toronto</h1>
+
+	<div class="image_grid">
+
+		{% for item in site.data.works.toronto %}
+
+		<div class="image_grid_item">
+			<img src="{{ item.url }}" alt="{{ item.alt }}">
+		</div>
+
+		{% endfor %}
+		
+	</div>
+
+	<p>
+
+		<a href="https://www.zoscuisine.co/gatheringarchives/gathering-009">https://www.zoscuisine.co/gatheringarchives/gathering-009</a>
+
+		<br>
+
+		<a href="https://www.zoscuisine.co/uncontrolled-burn">https://www.zoscuisine.co/uncontrolled-burn</a>
+
+
+	</p>
+
+</div>
+
+<div class="overlay"></div>
+<div class="overlay-content">
+	<img class="overlay-img" src="">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	$(".image_grid_item img").click(function(){		                                        
+		$(".overlay-img").attr("src",$(this).prop('src'));
+	    $(".overlay").show();
+	    $(".overlay-content").show();
+	});
+
+	$(".overlay, .overlay-content").click(function(){
+	    $(".overlay-img").attr("src", "");
+	    $(".overlay").hide();
+	    $(".overlay-content").hide();
+	});
+		
+</script>
