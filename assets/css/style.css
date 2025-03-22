@@ -113,7 +113,7 @@ a:visited {
 }
 
 .overlay-content {
-	z-index: 99999;
+	z-index: 99999999999999999999999999;
 	width: 100vw;
 	height: 100vh;
 
@@ -123,6 +123,7 @@ a:visited {
 }
 
 .overlay-content img {
+	z-index: 99999999999999999999999999;
 	position: absolute;
 	width: 25rem;
 	height: auto;
