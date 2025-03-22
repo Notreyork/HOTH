@@ -82,6 +82,8 @@ a {
 	color: #FFE7DF;
 	font-family: "Lacquer", system-ui;
 	text-decoration: none;
+
+	cursor: pointer;
 }
 
 a:hover {
@@ -92,15 +94,85 @@ a:visited {
 	color: #FFE7DF;
 }
 
+/**** IMAGE GRID ****/
 
+.overlay,
+.overlay-content {
+	display: none;
+	position: fixed;
 
-@media only screen and (max-width: 799px) {
+	top: 0;
+	left: 0;
+
+}
+
+.overlay {
+	z-index: 99999999999999999999999999;
+	width: 100vw;
+	height: 100vh;
+}
+
+.overlay-content {
+	z-index: 99999;
+	width: 100vw;
+	height: 100vh;
+
+	aspect-ratio : 1 / 1;
+  	object-fit: contain;
+
+}
+
+.overlay-content img {
+	position: absolute;
+	width: 25rem;
+	height: auto;
+
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	object-fit: contain;
+}
+
+.image_grid {
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1rem;
+	padding: 1rem 5rem 1rem 1rem;
+}
+
+.image_grid_item {
+    display: block;
+    aspect-ratio: 1/1;
+    position: relative; /* Needed for absolute positioning of img */
+    overflow: hidden;
+}
+
+.image_grid_item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full image is visible */
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 25rem) {
+	.overlay-content img {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 899px) {
 
 	* {
 		font-size: 16px;
 
 	}
-
 
 	header nav ul li a img {
 		width: 2rem;
@@ -111,4 +183,14 @@ a:visited {
 		right: 5rem !important;
 	}
 
+	.image_grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+}
+
+@media only screen and (max-width: 599px) {
+	.image_grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }

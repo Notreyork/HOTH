@@ -1,0 +1,9 @@
+---
+layout: default
+title: Farm
+permalink: /works/toronto/
+---
+
+{% for item in site.data.toronto.gallery %}
+  <img src="{{ item.url }}" alt="{{ item.alt }}">
+{% endfor %}
