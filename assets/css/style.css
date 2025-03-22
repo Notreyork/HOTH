@@ -107,32 +107,36 @@ a:visited {
 }
 
 .overlay {
-	z-index: 99999999999999999999999999;
-	width: 100vw;
-	height: 100vh;
+    z-index: 10000; /* Higher z-index to be on top */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Optional: dark background */
 }
 
 .overlay-content {
-	z-index: 99999999999999999999999999;
-	width: 100vw;
-	height: 100vh;
-
-	aspect-ratio : 1 / 1;
-  	object-fit: contain;
-
+    z-index: 10001; /* Even higher z-index to stay on top of overlay */
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-content img {
-	z-index: 99999999999999999999999999;
-	position: absolute;
-	width: 25rem;
-	height: auto;
-
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	object-fit: contain;
+    z-index: 10002; /* Highest z-index to ensure image stays on top */
+    position: absolute;
+    width: 25rem;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
 }
+
 
 .image_grid {
 	margin-top: 3rem;
