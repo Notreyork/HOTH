@@ -1,0 +1,40 @@
+---
+layout: default
+title: Gabriola
+permalink: /works/gabriola/
+---
+
+<div class="image_grid">
+
+	{% for item in site.data.works.gabriola %}
+
+	<div class="image_grid_item">
+		<img src="{{ item.url }}" alt="{{ item.alt }}">
+	</div>
+
+	{% endfor %}
+	
+</div>
+
+<div class="overlay"></div>
+<div class="overlay-content">
+	<img class="overlay-img" src="">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	$(".image_grid_item img").click(function(){		                                        
+		$(".overlay-img").attr("src",$(this).prop('src'));
+	    $(".overlay").show();
+	    $(".overlay-content").show();
+	});
+
+	$(".overlay, .overlay-content").click(function(){
+	    $(".overlay-img").attr("src", "");
+	    $(".overlay").hide();
+	    $(".overlay-content").hide();
+	});
+		
+</script>
