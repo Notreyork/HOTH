@@ -1,0 +1,51 @@
+---
+layout: default
+title: Farm - 2023
+permalink: /works/farm/2023
+---
+
+
+<div class="image_grid_container">
+
+	<h1>Farm - 2023</h1>
+
+	<p>
+		The seedlings stretched toward the grow lights, their small leaves trembling against the hum of the city. Shelves lined the apartment walls, stacked with Neversink Winstrip trays, a quiet testament to possibility. The growing season of 2023 arrived like a forgotten dream, with compost plopped onto the beds—a gesture of care, a slow breath for the land. Mulch would follow, locking in moisture, whispering to the roots beneath. An irrigation system would guide water through veins, a lifeline to prevent loss, erosion, and depletion. Thank you, Vic, for making this happen. As Lola’s hands met the earth, a thought of bees lingered. Steve, with his colonies alive in their own rhythm, had spoken of them. Tending to bees would be another lesson in patience, another act of reciprocity. That year, for the first time, the Three Sisters were planted: corn, beans, squash—a dance of support, sustenance, shelter. But timing faltered. The beans came too soon, climbing, pulling, bending the corn beneath their weight. The squash, the only sister to thrive, sprawled across the earth, unbothered, wild, singing its own song. A season of learning, of failing. Yet, this time, the yield was enough to share. Green hands met open palms, a quiet offering to the community. The land exhales, and we listen.
+	</p>
+
+	<div class="image_grid">
+
+		{% for item in site.data.works.farm2023 %}
+
+		<div class="image_grid_item">
+			<img src="{{ item.url }}" alt="{{ item.alt }}">
+		</div>
+
+		{% endfor %}
+		
+	</div>
+
+</div>
+
+<div class="overlay"></div>
+<div class="overlay-content">
+	<img class="overlay-img" src="">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	$(".image_grid_item img").click(function(){		                                        
+		$(".overlay-img").attr("src",$(this).prop('src'));
+	    $(".overlay").show();
+	    $(".overlay-content").show();
+	});
+
+	$(".overlay, .overlay-content").click(function(){
+	    $(".overlay-img").attr("src", "");
+	    $(".overlay").hide();
+	    $(".overlay-content").hide();
+	});
+		
+</script>
