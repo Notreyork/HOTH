@@ -15,6 +15,13 @@
 </head>
 <body>
 
+    <div class="overlay">
+        <div class="overlay-content">
+            <img class="overlay-img" src="">
+        </div>
+    </div>
+
+
     {% include header.html %}  
 
     <main>
@@ -22,6 +29,25 @@
     </main>
 
     {% include footer.html %} 
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".image_grid_item img").click(function() {                                             
+                $(".overlay-img").attr("src", $(this).prop('src'));
+                $(".overlay, .overlay-content").addClass("active");
+            });
+
+            // Close overlay when clicking anywhere
+            $(document).click(function(e) {
+                if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
+                    $(".overlay-img").attr("src", "");
+                    $(".overlay, .overlay-content").removeClass("active");
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,53 @@
+---
+layout: default
+title: Farm - 2022
+permalink: /works/farm/2022
+---
+
+
+<div class="image_grid_container">
+
+	<h1>Farm - 2022</h1>
+
+	<p>
+		The body buzzing, the garden is suspended between histories, between what was once here and what can still grow. In the Ontario soil, Lola isn’t just planting food but sowing a quiet resistance to time. The earth, reluctant, doesn’t yield easily. Does rain have a sound of its own, or is it only upon collision that sound occurs? With Pilen Construction's help, the land is gently reshaped, and trees that once stood tall are woven back into the soil as pathways, an offering to what was and what could still be. 
+		<br><br>
+		This garden is a tribute not only to Lola’s grandfather but also to the wisdom of Indigenous communities whose hands once shaped this land. Though their teachings have often been erased, Lola’s work is guided by the understanding that those who stewarded the land before them left a legacy of care. Has anybody heard the pure sound of rain falling? The garden hums with anticipation for learning from that wisdom, even if Lola has yet to meet the people who carry it. If we could put our ears right up to it, what would it sound like? Domenic’s gate, a simple artifact, stands at the entrance as a symbol of connection to the past and the possibility of what could unfold. As they plant, water, and dream, Lola and their community move gracefully, understanding that restoration is a humble act of being inside the light.
+	</p>
+
+	<div class="image_grid">
+
+		{% for item in site.data.works.farm2023 %}
+
+		<div class="image_grid_item">
+			<img src="{{ item.url }}" alt="{{ item.alt }}">
+		</div>
+
+		{% endfor %}
+		
+	</div>
+
+</div>
+
+<div class="overlay"></div>
+<div class="overlay-content">
+	<img class="overlay-img" src="">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	$(".image_grid_item img").click(function(){		                                        
+		$(".overlay-img").attr("src",$(this).prop('src'));
+	    $(".overlay").show();
+	    $(".overlay-content").show();
+	});
+
+	$(".overlay, .overlay-content").click(function(){
+	    $(".overlay-img").attr("src", "");
+	    $(".overlay").hide();
+	    $(".overlay-content").hide();
+	});
+		
+</script>

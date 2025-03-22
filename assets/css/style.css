@@ -102,44 +102,47 @@ a:visited {
 
 .overlay,
 .overlay-content {
-	display: none;
-	position: fixed;
-
-	top: 0;
-	left: 0;
-
-}
-
-.overlay {
-    z-index: 10000; /* Higher z-index to be on top */
-    width: 100vw;
-    height: 100vh;
+    display: none; /* Ensure it's hidden on load */
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8); /* Optional: dark background */
+}
+
+.overlay {
+	z-index: 10000;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	justify-content: center;
+	align-items: center;
 }
 
 .overlay-content {
-    z-index: 10001; /* Even higher z-index to stay on top of overlay */
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
+	z-index: 10001;
+	width: 25rem;
+	max-width: 100%;
+	aspect-ratio: 1/1;
+	position: relative; /* Needed for absolute positioning of img */
+	overflow: hidden;
+	display: block;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	border: 1px dotted red;
 }
 
 .overlay-content img {
-    z-index: 10002; /* Highest z-index to ensure image stays on top */
-    position: absolute;
-    width: 25rem;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
+	z-index: 10002;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	position: absolute;
+}
+
+/* When active, show overlay and allow interaction */
+.overlay.active,
+.overlay-content.active {
+    display: flex; /* Show when active */
+    pointer-events: auto;
 }
 
 
@@ -180,7 +183,7 @@ a:visited {
 }
 
 @media only screen and (max-width: 25rem) {
-	.overlay-content img {
+	.overlay-content {
 		width: 100%;
 	}
 }
