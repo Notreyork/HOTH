@@ -126,8 +126,6 @@ a:visited {
 	position: relative; /* Needed for absolute positioning of img */
 	overflow: hidden;
 	display: block;
-
-	border: 1px dotted red;
 }
 
 .overlay-content img {
