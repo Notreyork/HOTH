@@ -7,11 +7,13 @@ farm2022hearthstone:
     alt: ""
   - url: /assets/images/works/farm/2022/5hearthstone.jpg
     alt: ""
+  - url: /assets/images/works/farm/2022/6hearthstone.jpg
+    video: /assets/images/works/farm/2022/6hearthstone.mp4
+    alt: ""
   - url: /assets/images/works/farm/2022/7hearthstone.jpg
     alt: ""
   - url: /assets/images/works/farm/2022/video1.jpg
     alt: ""
-    video: /assets/images/works/farm/2022/video1.mp4
 
 farm2022filmshotbylola:
   - url: /assets/images/works/farm/2022/8filmshotbylola.jpg
@@ -30,6 +32,9 @@ farm2022filmshotbylola:
     alt: ""
   - url: /assets/images/works/farm/2022/15filmshotbylola.jpg
     alt: ""
+  - url: /assets/images/works/farm/2022/16filmshotbylola.jpg
+    alt: ""
+    video: /assets/images/works/farm/2022/16filmshotbylola.mp4
 
 farm2022blipsofbeings:
   - url: /assets/images/works/farm/2022/17blipsofbeings.png
@@ -88,10 +93,16 @@ farm2024:
     alt: ""
   - url: /assets/images/works/farm/2024/7.jpg
     alt: ""
+  - url: /assets/images/works/farm/2024/7-1.jpg
+    alt: ""
+    video: /assets/images/works/farm/2024/7-1.mp4
   - url: /assets/images/works/farm/2024/8.jpg
     alt: ""
   - url: /assets/images/works/farm/2024/9.jpg
     alt: ""
+  - url: /assets/images/works/farm/2024/9-1.jpg
+    alt: ""
+    video: /assets/images/works/farm/2024/9-1.mp4
   - url: /assets/images/works/farm/2024/10.jpg
     alt: ""
   - url: /assets/images/works/farm/2024/11.jpg
@@ -108,8 +119,14 @@ farm2024:
     alt: ""
   - url: /assets/images/works/farm/2024/18.jpg
     alt: ""
+  - url: /assets/images/works/farm/2024/17.jpg
+    alt: ""
+    video: /assets/images/works/farm/2024/17.mp4
   - url: /assets/images/works/farm/2024/19.jpg
     alt: ""
+  - url: /assets/images/works/farm/2024/19-1.jpg
+    alt: ""
+    video: /assets/images/works/farm/2024/19-1.mp4
 
 
 

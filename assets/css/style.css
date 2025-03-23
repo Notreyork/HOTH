@@ -171,7 +171,7 @@ p a {
 }
 
 .image_grid_item {
-    display: block;
+    display: inline-block;
     aspect-ratio: 1/1;
     position: relative; /* Needed for absolute positioning of img */
     overflow: hidden;
@@ -189,6 +189,31 @@ p a {
 
     cursor: pointer;
 }
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 18px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    display: block;
+}
+
 
 @media only screen and (max-width: 25rem) {
 	.overlay-content {
