@@ -19,7 +19,7 @@ permalink: /works/farm/2022
 		Summer unfolds between remorse and possibility. Tomato vines somehow forgive, pushing through disrupted earth with stubborn clemency. Their fruit tastes of both sweetness and culpability during late August harvest.
 		<br>
 		<br>
-		The garden teaches patience where ambition reigned. Soil rehabilitation happens in decades, not seasons. Each earthworm emerges as absolution; every mushroom whispers resilience. The land holds a vernacular I'm beginning to comprehend reconciliation comes not from erasing transgressions but by bearing witness to what we've transformed.
+		The garden teaches patience where ambition reigned. Soil rehabilitation happens in decades, not seasons. Each earthworm emerges as absolution; every mushroom whispers resilience. The land holds a vernacular. I'm beginning to comprehend reconciliation comes not from erasing transgressions but by bearing witness to what we've transformed.
 
 	</p>
 
@@ -27,14 +27,20 @@ permalink: /works/farm/2022
 
 	<div class="image_grid">
 
-		{% for item in site.data.works.farm2022hearthstone %}
+	    {% for item in site.data.works.farm2022hearthstone %}
 
-		<div class="image_grid_item">
-			<img src="{{ item.url }}" alt="{{ item.alt }}">
-		</div>
+	        <div class="image_grid_item" data-video="{{ item.video | default: '' }}">
 
-		{% endfor %}
-		
+	            <img src="{{ item.url }}" alt="{{ item.alt }}">
+
+	            {% if item.video %}
+                	<div class="play-button"></div>
+            	{% endif %}
+
+	        </div>
+
+	    {% endfor %}
+
 	</div>
 
 	<h1>Film Shot By Lola</h1>

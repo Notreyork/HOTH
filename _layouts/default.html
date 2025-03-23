@@ -18,9 +18,9 @@
     <div class="overlay">
         <div class="overlay-content">
             <img class="overlay-img" src="">
+            <video class="overlay-video" controls style="display: none;"></video>
         </div>
     </div>
-
 
     {% include header.html %}  
 
@@ -33,29 +33,40 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function() {
-            // Open overlay on image click
-            $(".image_grid_item img").click(function() {                                             
-                $(".overlay-img").attr("src", $(this).prop('src'));
-                $(".overlay, .overlay-content").addClass("active");
-            });
+    $(document).ready(function() {
+        $(".image_grid_item img").click(function() {                                             
+            var parent = $(this).parent();
+            var videoUrl = parent.data('video');
+            var imageUrl = $(this).prop('src');
 
-            // Close overlay when clicking anywhere or on the image itself
-            $(document).click(function(e) {
-                // Check if the click target is outside the image or overlay content
-                if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
-                    $(".overlay-img").attr("src", "");
-                    $(".overlay, .overlay-content").removeClass("active");
-                }
-            });
+            if (videoUrl) {
+                $(".overlay-video").attr("src", videoUrl).show();
+                $(".overlay-img").hide();
+            } else {
+                $(".overlay-img").attr("src", imageUrl).show();
+                $(".overlay-video").hide();
+            }
 
-            // Also close when clicking on the overlay image itself
-            $(".overlay-content img").click(function(e) {
-                $(".overlay-img").attr("src", "");
-                $(".overlay, .overlay-content").removeClass("active");
-                e.stopPropagation(); // Prevent event from bubbling up to document
-            });
+            $(".overlay, .overlay-content").addClass("active");
         });
+
+        // Close overlay on click outside content
+        $(document).click(function(e) {
+            if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
+                $(".overlay-img").attr("src", "");
+                $(".overlay-video").attr("src", "").hide();
+                $(".overlay, .overlay-content").removeClass("active");
+            }
+        });
+
+        // Close overlay when clicking on the image or video itself
+        $(".overlay-content img").click(function(e) {
+            $(".overlay-img").attr("src", "");
+            $(".overlay-video").attr("src", "").hide();
+            $(".overlay, .overlay-content").removeClass("active");
+            e.stopPropagation();
+        });
+    });
     </script>
 
 </body>

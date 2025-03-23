@@ -9,6 +9,9 @@ farm2022hearthstone:
     alt: ""
   - url: /assets/images/works/farm/2022/7hearthstone.jpg
     alt: ""
+  - url: /assets/images/works/farm/2022/video1.jpg
+    alt: ""
+    video: /assets/images/works/farm/2022/video1.mp4
 
 farm2022filmshotbylola:
   - url: /assets/images/works/farm/2022/8filmshotbylola.jpg
@@ -78,8 +81,6 @@ farm2024:
   - url: /assets/images/works/farm/2024/3.JPG
     alt: ""
   - url: /assets/images/works/farm/2024/4.JPG
-    alt: ""
-  - url: /assets/images/works/farm/2024/5.JPG
     alt: ""
   - url: /assets/images/works/farm/2024/5.JPG
     alt: ""
