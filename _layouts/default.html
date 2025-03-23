@@ -33,40 +33,47 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <script>
-    $(document).ready(function() {
-        $(".image_grid_item img").click(function() {                                             
-            var parent = $(this).parent();
-            var videoUrl = parent.data('video');
-            var imageUrl = $(this).prop('src');
+        
+        $(document).ready(function() {
+        $(".image_grid_item").click(function() {                                             
+        var videoUrl = $(this).data('video');
+        var imageUrl = $(this).find("img").prop('src');
 
-            if (videoUrl) {
-                $(".overlay-video").attr("src", videoUrl).show();
-                $(".overlay-img").hide();
-            } else {
-                $(".overlay-img").attr("src", imageUrl).show();
-                $(".overlay-video").hide();
-            }
+        if (videoUrl) {
+        $(".overlay-video").attr("src", videoUrl).show();
+        $(".overlay-img").hide();
+        } else {
+        $(".overlay-img").attr("src", imageUrl).show();
+        $(".overlay-video").hide();
+        }
 
-            $(".overlay, .overlay-content").addClass("active");
+        $(".overlay, .overlay-content").addClass("active");
         });
 
-        // Close overlay on click outside content
+        // Ensure clicking the play button also triggers the overlay
+        $(".play-button").click(function(e) {
+        e.stopPropagation(); // Prevents click from bubbling up and closing the overlay
+        $(this).closest(".image_grid_item").trigger("click");
+        });
+
+        // Close overlay when clicking outside content
         $(document).click(function(e) {
-            if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
-                $(".overlay-img").attr("src", "");
-                $(".overlay-video").attr("src", "").hide();
-                $(".overlay, .overlay-content").removeClass("active");
-            }
+        if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
+        $(".overlay-img").attr("src", "");
+        $(".overlay-video").attr("src", "").hide();
+        $(".overlay, .overlay-content").removeClass("active");
+        }
         });
 
-        // Close overlay when clicking on the image or video itself
-        $(".overlay-content img").click(function(e) {
-            $(".overlay-img").attr("src", "");
-            $(".overlay-video").attr("src", "").hide();
-            $(".overlay, .overlay-content").removeClass("active");
-            e.stopPropagation();
+        // Close overlay when clicking on image or video itself
+        $(".overlay-content img, .overlay-content video").click(function(e) {
+        $(".overlay-img").attr("src", "");
+        $(".overlay-video").attr("src", "").hide();
+        $(".overlay, .overlay-content").removeClass("active");
+        e.stopPropagation();
         });
-    });
+        });
+
     </script>
 
 </body>
