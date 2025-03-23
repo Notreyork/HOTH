@@ -34,17 +34,26 @@
 
     <script>
         $(document).ready(function() {
+            // Open overlay on image click
             $(".image_grid_item img").click(function() {                                             
                 $(".overlay-img").attr("src", $(this).prop('src'));
                 $(".overlay, .overlay-content").addClass("active");
             });
 
-            // Close overlay when clicking anywhere
+            // Close overlay when clicking anywhere or on the image itself
             $(document).click(function(e) {
+                // Check if the click target is outside the image or overlay content
                 if (!$(e.target).closest(".overlay-content, .image_grid_item").length) {
                     $(".overlay-img").attr("src", "");
                     $(".overlay, .overlay-content").removeClass("active");
                 }
+            });
+
+            // Also close when clicking on the overlay image itself
+            $(".overlay-content img").click(function(e) {
+                $(".overlay-img").attr("src", "");
+                $(".overlay, .overlay-content").removeClass("active");
+                e.stopPropagation(); // Prevent event from bubbling up to document
             });
         });
     </script>
