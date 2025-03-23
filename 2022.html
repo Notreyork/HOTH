@@ -31,7 +31,7 @@ permalink: /works/farm/2022
 
 	        <div class="image_grid_item" data-video="{{ item.video | default: '' }}">
 
-	            <img class="img" src="{{ item.url }}" alt="{{ item.alt }}">
+	            <img class="img" src="{{ item.url }}" alt="{{ item.alt }}" {% if item.video %} style="filter: blur(1px);" {% endif %}>
 
 	            {% if item.video %}
                 	<div class="play-button"></div>
@@ -51,7 +51,7 @@ permalink: /works/farm/2022
 
 			<div class="image_grid_item" data-video="{{ item.video | default: '' }}">
 
-		        <img class="img" src="{{ item.url }}" alt="{{ item.alt }}">
+		        <img class="img" src="{{ item.url }}" alt="{{ item.alt }}" {% if item.video %} style="filter: blur(1px);" {% endif %}>
 
 		        {% if item.video %}
 
@@ -72,7 +72,7 @@ permalink: /works/farm/2022
 		{% for item in site.data.works.farm2022blipsofbeings%}
 
 		<div class="image_grid_item">
-			<img class="img" src="{{ item.url }}" alt="{{ item.alt }}">
+			<img class="img" src="{{ item.url }}" alt="{{ item.alt }}" {% if item.video %} style="filter: blur(1px);" {% endif %}>
 		</div>
 
 		{% endfor %}
