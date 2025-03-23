@@ -25,7 +25,7 @@ permalink: /works/farm/2024
 
 			<div class="image_grid_item" data-video="{{ item.video | default: '' }}">
 
-	            <img class="img" src="{{ item.url }}" alt="{{ item.alt }}">
+	            <img class="img" src="{{ item.url }}" alt="{{ item.alt }}" {% if item.video %} style="filter: blur(1px);" {% endif %}>
 
 	            {% if item.video %}
                 	<div class="play-button"></div>
