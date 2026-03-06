@@ -56,7 +56,7 @@ main {
 	margin-bottom: 4rem;
 
 	opacity: 0;
-    animation: fadeInAnimation 1.5s ease-in-out 0.5s forwards;
+    animation: fadeInAnimation 3s ease-in-out 1s forwards;
 }
 
 ul {
